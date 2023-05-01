@@ -1,0 +1,5 @@
+function<vec4(vec2)> main(std::Texture2d tex) {
+  return [](vec2 uv) {
+      return tex.sample(vec2(tex.size[0] - uv[0], uv[1]));
+  };
+}
